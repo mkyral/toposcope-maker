@@ -1,6 +1,7 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const { Map, TileLayer, Marker, LayersControl } = require('react-leaflet');
+const ToolControl = require('./toolControl.js');
 const Toposcope = require('./toposcope.jsx');
 const Hourglass = require('./hourglass.jsx');
 const createMarker = require('./markers.js');
@@ -193,6 +194,8 @@ class Main extends React.Component {
                     )
                   }
                 </LayersControl>
+
+                <ToolControl/>
 
                 {viewer &&
                   <Marker position={viewer} icon={placeIcon}
